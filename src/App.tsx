@@ -32,6 +32,10 @@ export default function App() {
 
   const labels = language === 'en' ? enLocale : ptbrLocale;
 
+  function handleSetLanguageFromEditor(l: string) {
+    setLanguage(l as 'en' | 'pt-br');
+  }
+
   async function handleDownload(lang: 'en' | 'pt-br') {
     const prev = language;
     setLanguage(lang);
@@ -53,7 +57,7 @@ export default function App() {
               setData={setData}
               labels={labels}
               language={language}
-              setLanguage={setLanguage}
+              setLanguage={handleSetLanguageFromEditor}
               onDownload={handleDownload}
               templates={TEMPLATES}
               template={template}
