@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* preview "sheet" that matches A4 size for html2pdf */
+.cv-sheet {
+  background: white;
+  color: #111827;
+  box-shadow: 0 4px 14px rgba(2,6,23,0.08);
+  width: 210mm;
+  min-height: 297mm;
+  padding: 20mm;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.page-break {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* Force A4 page size and remove default print margins so the sheet fits exactly */
+@page { size: A4; margin: 0; }
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    background: white;
+  }
+  .no-print { display: none !important; }
+  .cv-sheet { box-shadow: none; border-radius: 0; }
+}

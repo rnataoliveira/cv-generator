@@ -1,0 +1,23 @@
+{
+  "siteTitle": "Gerador de CV",
+  "labels": {
+    "name": "Nome",
+    "title": "Cargo",
+    "email": "Email",
+    "phone": "Telefone",
+    "summary": "Resumo",
+    "experience": "Experiência",
+    "education": "Educação",
+    "skills": "Habilidades",
+    "company": "Empresa",
+    "role": "Cargo",
+    "from": "Início",
+    "to": "Fim",
+    "description": "Descrição",
+    "add": "Adicionar",
+    "remove": "Remover",
+    "download": "Baixar",
+    "template": "Modelo",
+    "language": "Idioma"
+  }
+}

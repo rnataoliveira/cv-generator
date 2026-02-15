@@ -1,0 +1,23 @@
+{
+  "siteTitle": "CV Generator",
+  "labels": {
+    "name": "Name",
+    "title": "Title",
+    "email": "Email",
+    "phone": "Phone",
+    "summary": "Summary",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "company": "Company",
+    "role": "Role",
+    "from": "From",
+    "to": "To",
+    "description": "Description",
+    "add": "Add",
+    "remove": "Remove",
+    "download": "Download",
+    "template": "Template",
+    "language": "Language"
+  }
+}
