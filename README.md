@@ -28,6 +28,13 @@ npm run dev
 
 Open http://localhost:5173
 
+## Badges
+
+[![Build](https://github.com/rnataoliveira/cv-generator/actions/workflows/deploy.yml/badge.svg)](https://github.com/rnataoliveira/cv-generator/actions/workflows/deploy.yml)
+[![Release](https://img.shields.io/github/v/release/rnataoliveira/cv-generator)](https://github.com/rnataoliveira/cv-generator/releases)
+[![License](https://img.shields.io/github/license/rnataoliveira/cv-generator)](LICENSE)
+
+
 ## Build & Preview
 
 ```bash
@@ -70,3 +77,18 @@ PRs welcome. Run tests before opening a PR.
 ## License
 
 MIT
+
+## Releases & versioning
+
+This repository supports semantic releases via Git tags. Create a new annotated tag (for example `v1.0.0`) and push it to trigger the release workflow which will build the project and create a GitHub Release with the production `dist/` attached.
+
+Example:
+
+```bash
+# create an annotated tag
+git tag -a v1.0.0 -m "Release v1.0.0"
+# push tag
+git push origin v1.0.0
+```
+
+The repository also includes a workflow that runs on pushed tags matching the pattern `v*.*.*` and will create a GitHub release automatically.
