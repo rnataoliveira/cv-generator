@@ -6,7 +6,7 @@ on:
 
 # Explicit permissions are required for publishing to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
