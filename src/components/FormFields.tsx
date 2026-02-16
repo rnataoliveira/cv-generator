@@ -54,7 +54,7 @@ export default function FormFields({ data, setData, labels, templates, template,
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
           <label className="block text-sm text-gray-600">{labels.title}</label>
           <input className="w-full border rounded px-3 py-2" value={data.title} onChange={e => update({ title: e.target.value })} />
@@ -65,7 +65,7 @@ export default function FormFields({ data, setData, labels, templates, template,
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
           <label className="block text-sm text-gray-600">{labels.phone}</label>
           <input className="w-full border rounded px-3 py-2" value={data.phone} onChange={e => update({ phone: e.target.value })} />
@@ -94,9 +94,9 @@ export default function FormFields({ data, setData, labels, templates, template,
         <div className="space-y-3 mt-2">
           {data.experience.map((exp, i) => (
             <div key={i} className="border rounded p-3">
-              <div className="flex gap-2">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <input className="flex-1 border rounded px-2 py-1" placeholder={labels.company} value={exp.company} onChange={e => updateExperience(i, { company: e.target.value })} />
-                <input className="w-44 border rounded px-2 py-1" placeholder={labels.role} value={exp.role} onChange={e => updateExperience(i, { role: e.target.value })} />
+                <input className="sm:w-44 border rounded px-2 py-1" placeholder={labels.role} value={exp.role} onChange={e => updateExperience(i, { role: e.target.value })} />
               </div>
               <div className="flex gap-2 mt-2">
                 <input className="border rounded px-2 py-1" placeholder={labels.from} value={exp.from} onChange={e => updateExperience(i, { from: e.target.value })} />
@@ -119,9 +119,9 @@ export default function FormFields({ data, setData, labels, templates, template,
         <div className="space-y-3 mt-2">
           {data.education.map((edu, i) => (
             <div key={i} className="border rounded p-3">
-              <div className="flex gap-2">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <input className="flex-1 border rounded px-2 py-1" placeholder="School" value={edu.school} onChange={e => updateEducation(i, { school: e.target.value })} />
-                <input className="w-44 border rounded px-2 py-1" placeholder="Degree" value={edu.degree} onChange={e => updateEducation(i, { degree: e.target.value })} />
+                <input className="sm:w-44 border rounded px-2 py-1" placeholder="Degree" value={edu.degree} onChange={e => updateEducation(i, { degree: e.target.value })} />
               </div>
               <div className="flex gap-2 mt-2">
                 <input className="border rounded px-2 py-1" placeholder={labels.from} value={edu.from} onChange={e => updateEducation(i, { from: e.target.value })} />

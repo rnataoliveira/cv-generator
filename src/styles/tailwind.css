@@ -19,6 +19,22 @@
   break-inside: avoid;
 }
 
+/* Responsive preview: scale the A4 sheet to fit small screens.
+   We use CSS zoom so the element's layout size shrinks along with its visual size,
+   avoiding large empty gaps below the preview. The PDF export clones the element
+   and resets inline styles, so zoom has no effect on the exported PDF. */
+@media (max-width: 767px) {
+  .cv-preview-wrapper .cv-sheet {
+    zoom: 0.42;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cv-preview-wrapper .cv-sheet {
+    zoom: 0.55;
+  }
+}
+
 /* Force A4 page size and remove default print margins so the sheet fits exactly */
 @page { size: A4; margin: 0; }
 

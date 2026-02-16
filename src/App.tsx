@@ -48,10 +48,10 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen p-6 bg-gray-50">
-      <div className="max-w-7xl mx-auto grid grid-cols-12 gap-6">
-        <div className="col-span-5">
-          <div className="bg-white border p-6 rounded-lg shadow-sm">
+    <div className="min-h-screen p-3 md:p-6 bg-gray-50">
+      <div className="max-w-7xl mx-auto flex flex-col md:grid md:grid-cols-12 gap-6">
+        <div className="md:col-span-5">
+          <div className="bg-white border p-4 md:p-6 rounded-lg shadow-sm">
             <Editor
               data={data}
               setData={setData}
@@ -66,14 +66,14 @@ export default function App() {
           </div>
         </div>
 
-        <div className="col-span-7">
-          <div className="p-4">
+        <div className="md:col-span-7">
+          <div className="p-0 md:p-4">
             <div className="mb-3 flex justify-between items-center">
               <div className="text-sm text-gray-600">Preview ({template})</div>
-              <div className="text-xs text-gray-500">Use the buttons to download EN / PT‑BR</div>
+              <div className="text-xs text-gray-500 hidden sm:block">Use the buttons to download EN / PT‑BR</div>
             </div>
 
-            <div className="border p-4 bg-gray-200 flex justify-center">
+            <div className="border p-2 md:p-4 bg-gray-200 flex justify-center cv-preview-wrapper">
               <Preview ref={previewRef} data={data} template={template} labels={labels.labels} />
             </div>
           </div>

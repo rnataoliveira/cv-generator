@@ -18,7 +18,7 @@ type EditorProps = {
 export default function Editor({ data, setData, labels, language, setLanguage, onDownload, templates, template, setTemplate }: EditorProps) {
   return (
     <div className="space-y-4">
-      <div className="flex justify-between items-start">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
         <div>
           <h1 className="text-xl font-semibold">{labels.siteTitle}</h1>
           <div className="mt-2">
